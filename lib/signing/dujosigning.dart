@@ -34,11 +34,30 @@ class _DujoLoginState extends State<DujoLogin> with TickerProviderStateMixin {
       body: ListView(children: [
         Stack(
           children: [
+             Padding(
+                padding:  EdgeInsets.only(top: screenSize.width*1/12,) ,
+                //left: screenSize.width*1/3.3
+                
+                child: Center(
+                  child: Container(
+                    height: screenSize.width*1/6,
+                    width: 100,
+                     decoration: new BoxDecoration(
+                     image: new DecorationImage(
+                     image: new AssetImage('assets/images/leptdujo.png'),
+                     fit: BoxFit.fill,
+                       )
+                     )
+                   ),
+                ),
+              ),
+
+              SizedBox(height: screenSize.width*1,),
             Stack(
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      top: screenSize.width * 1 / 3.5, left: 30),
+                      top: screenSize.width * 1 / 2.5, left: 30),
                   child: Container(
                     height: screenSize.width * 1 / 7,
                     width: screenSize.width * 1 / 2,
@@ -55,7 +74,7 @@ class _DujoLoginState extends State<DujoLogin> with TickerProviderStateMixin {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      top: screenSize.width * 1 / 4.5, left: 30),
+                      top: screenSize.width * 1 / 3, left: 30),
                   child: Container(
                     height: screenSize.width * 1 / 7,
                     width: screenSize.width * 1 / 2,
@@ -71,46 +90,48 @@ class _DujoLoginState extends State<DujoLogin> with TickerProviderStateMixin {
                 ),
                 Stack(
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                            margin:
-                                EdgeInsets.only(top: screenSize.width * 1 / 12),
-                            width: screenSize.width / 3,
-                            child: Divider(
-                              color: Colors.red,
-                              thickness: 3,
-                            )),
-                        Padding(
-                          padding:
-                              EdgeInsets.only(top: screenSize.width * 1 / 12),
-                          child: Container(
-                            height: screenSize.width * 1 / 7,
-                            width: screenSize.width * 1 / 3,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  "https://storage.googleapis.com/scipro-bucket/lepton%20dujo.png",
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                            margin:
-                                EdgeInsets.only(top: screenSize.width * 1 / 12),
-                            width: screenSize.width / 3,
-                            child: Divider(
-                              color: Colors.red,
-                              thickness: 3,
-                            )),
-                      ],
-                    ),
+                    
+                    // Row(
+                    //   children: [
+                    //     Container(
+                    //         margin:
+                    //             EdgeInsets.only(top: screenSize.width * 1 / 12),
+                    //         width: screenSize.width / 3,
+                    //         child: Divider(
+                    //           color: Colors.red,
+                    //           thickness: 3,
+                    //         )),
+                    //     Padding(
+                    //       padding:
+                    //           EdgeInsets.only(top: screenSize.width * 1 / 12),
+                    //       child: Container(
+                    //         height: screenSize.width * 1 / 7,
+                    //         width: screenSize.width * 1 / 3,
+                    //         decoration: BoxDecoration(
+                    //           image: DecorationImage(
+                    //             image: NetworkImage(
+                    //               "https://storage.googleapis.com/scipro-bucket/lepton%20dujo.png",
+                    //             ),
+                    //             fit: BoxFit.cover,
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ),
+                    //     Container(
+                    //         margin:
+                    //             EdgeInsets.only(top: screenSize.width * 1 / 12),
+                    //         width: screenSize.width / 3,
+                    //         child: Divider(
+                    //           color: Colors.red,
+                    //           thickness: 3,
+                    //         )),
+                    //  ],
+                    //),
                   ],
                 ),
               ],
             ),
+            
             Padding(
                 padding: EdgeInsets.only(top: screenSize.width * 0.89),
                 child: Container(
@@ -122,8 +143,8 @@ class _DujoLoginState extends State<DujoLogin> with TickerProviderStateMixin {
                         topRight: Radius.circular(29)),
                     gradient: LinearGradient(
                       colors: [
-                        Color.fromARGB(255, 93, 8, 190),
-                        Color.fromARGB(255, 187, 33, 214),
+                        Color(0xFFD40469),
+                        Color.fromARGB(255, 173, 2, 165),
                       ],
                       begin: Alignment.bottomLeft,
                       end: Alignment.topRight,
@@ -173,28 +194,28 @@ class _DujoLoginState extends State<DujoLogin> with TickerProviderStateMixin {
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontSize: 13),
                                       ),
                                       Text(
                                         "Parent",
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontSize: 13),
                                       ),
                                        Text(
                                         "Guardian",
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontSize: 13),
                                       ),
                                       Text(
                                         "Teacher",
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 16),
+                                            fontSize: 13),
                                       )
                                     ]),
                               ),
